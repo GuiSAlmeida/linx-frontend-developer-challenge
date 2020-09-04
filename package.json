@@ -1,0 +1,23 @@
+{
+  "name": "linx-frontend-developer-challenge",
+  "version": "1.0.0",
+  "description": "This repo is about a challenge for Linx's front-end developer job",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuiSAlmeida/linx-frontend-developer-challenge.git"
+  },
+  "keywords": [
+    "challenge",
+    "frontend"
+  ],
+  "author": "Guilherme Almeida <guisalmeida.dev@gmail.com> (https://guisalmeida.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuiSAlmeida/linx-frontend-developer-challenge/issues"
+  },
+  "homepage": "https://github.com/GuiSAlmeida/linx-frontend-developer-challenge#readme"
+}
