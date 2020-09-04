@@ -50,7 +50,11 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This project uses a pre-push hook with steps that analyzes and prevents mistakes before deploy,
+make sure that ok using the following command:
+```
+npm run lint
+```
 
 ## Built With
 
