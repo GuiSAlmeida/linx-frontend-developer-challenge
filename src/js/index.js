@@ -1,4 +1,6 @@
-const num1 = 2;
+import '../scss/main.scss';
+
+const num1 = 3;
 const num2 = 4;
 
 const sum = (a, b) => a + b;
