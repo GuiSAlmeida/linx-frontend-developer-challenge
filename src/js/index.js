@@ -1,4 +1,4 @@
-import '../scss/main.scss';
+import '../scss/style.scss';
 
 const num1 = 3;
 const num2 = 4;
