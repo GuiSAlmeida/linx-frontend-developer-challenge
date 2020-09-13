@@ -11,6 +11,7 @@ body, body button, body input, html, html button, html input {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
+  color: $grey;
 }
 
 .container {
@@ -76,10 +77,118 @@ body, body button, body input, html, html button, html input {
   }
 }
 
+.register {
+  margin-top: 100px;
+
+  .container {
+    display: flex;
+  }
+
+  .register-content {
+    width: calc(60% - 60px);
+    margin-right: 60px;
+
+    .register-title {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 0.75rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  }
+
+  .register-form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+
+    & > label {
+      font-size: 0.75rem;
+      margin-bottom: 5px;
+    }
+
+    & > input {
+      border: 1px solid $dark-grey;
+      outline: none;
+      margin-bottom: 20px;
+      height: 30px;
+    }
+
+    .register-gender {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      label {
+        font-size: 0.75rem;
+      }
+
+      input {
+        margin: 0 5px 0 0;
+
+        &#female {
+          margin-left: 40px;
+        }
+      }
+    }
+
+    .register-form-button {
+      height: 40px;
+      border-radius: 4px;
+      background: $light;
+
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .header {
+    transform: skew(0deg, 10deg);
+
+    .container {
+      transform: skew(0deg, -10deg);
+    }
+
     .header-menu .header-button {
       width: calc(50% - 40px);
+    }
+  }
+
+  .register {
+    .container {
+      flex-direction: column;
+    }
+
+    .register-content,
+    .register-form {
+      width: 100%;
+      padding: 0 16px;
+    }
+
+    .register-title {
+      padding-right: 16px;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-top: 1px solid $dark-grey;
+        border-right: 1px solid $dark-grey;
+        cursor: pointer;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        position: absolute;
+        right: 0;
+        top: 50%;
+      }
     }
   }
 }
