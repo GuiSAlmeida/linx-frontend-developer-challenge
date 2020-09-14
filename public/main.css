@@ -1,1 +1,240 @@
-body{background:#fff}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, body button, body input, html, html button, html input {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #888888;
+}
+
+.container {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #707070;
+  color: #FFFFFF;
+  height: 420px;
+  padding-top: 170px;
+  text-align: center;
+  transform: skew(0deg, 4deg);
+  margin-top: -100px;
+}
+.header .container {
+  transform: skew(0deg, -4deg);
+}
+.header .header-content {
+  margin-bottom: 50px;
+}
+.header .header-content h1 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.header .header-content h1 strong {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 10px 0 24px;
+}
+.header .header-content h1 p {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.header .header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.header .header-menu .header-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 40px;
+  margin: 0 20px 20px;
+  text-decoration: none;
+  color: #707070;
+  background: #FFFFFF;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.register {
+  margin-top: 100px;
+}
+.register .container {
+  display: flex;
+}
+.register .register-content {
+  width: calc(60% - 60px);
+  margin: 0 60px 30px 0;
+}
+.register .register-content .register-title {
+  font-size: 1.25rem;
+}
+.register .register-content #register-description {
+  margin-top: 30px;
+}
+.register .register-content #register-description p {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.register .register-form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.register .register-form > label {
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+}
+.register .register-form > input {
+  border: 1px solid #707070;
+  outline: none;
+  margin-bottom: 20px;
+  height: 30px;
+}
+.register .register-form .register-gender {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.register .register-form .register-gender label {
+  font-size: 0.75rem;
+}
+.register .register-form .register-gender input {
+  margin: 0 5px 0 0;
+}
+.register .register-form .register-gender input#female {
+  margin-left: 40px;
+}
+.register .register-form .register-form-button {
+  height: 40px;
+  border-radius: 4px;
+  background: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .header {
+    transform: skew(0deg, 10deg);
+  }
+  .header .container {
+    transform: skew(0deg, -10deg);
+  }
+  .header .header-menu .header-button {
+    width: calc(50% - 40px);
+  }
+
+  .register .container {
+    flex-direction: column;
+  }
+  .register .register-content,
+.register .register-form {
+    width: 100%;
+    padding: 0 16px;
+    position: relative;
+  }
+  .register .register-title {
+    padding-right: 20px;
+  }
+  .register #registe-toggle-description {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+  }
+  .register #registe-toggle-description::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #707070;
+    border-right: 1px solid #707070;
+    cursor: pointer;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  .register #registe-toggle-description.toggle {
+    top: 0;
+  }
+  .register #registe-toggle-description.toggle ~ #register-description {
+    display: none;
+  }
+  .register #registe-toggle-description.toggle::after {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+
+/*# sourceMappingURL=main.css.map*/

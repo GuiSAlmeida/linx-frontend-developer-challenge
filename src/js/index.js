@@ -1,8 +1,11 @@
+/* eslint-disable func-names */
 import '../scss/style.scss';
 
-const num1 = 3;
-const num2 = 4;
+const toggleRegisterdescription = () => {
+  const button = document.getElementById('registe-toggle-description');
+  button.addEventListener('click', function () {
+    this.classList.toggle('toggle');
+  });
+};
 
-const sum = (a, b) => a + b;
-
-sum(num1, num2);
+toggleRegisterdescription();
