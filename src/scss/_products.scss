@@ -26,6 +26,8 @@
     grid-gap: 40px;
     grid-template-columns: repeat(4, minmax(150px, 200px));
     margin-bottom: 50px;
+    transition: all 0.3s ease;
+    position: relative;
   }
 
   .product-title {
