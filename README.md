@@ -2,6 +2,8 @@
 
 A challenge for Linx's Frontend Developer Job
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/419e83c7-d6df-4f45-b7d9-2cac88c7743e/deploy-status)](https://app.netlify.com/sites/challenge-linx/deploys)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.

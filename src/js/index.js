@@ -3,9 +3,13 @@ import toggleRegisterDescription from './toggleRegisterDescription';
 import getProducts from './getProducts';
 import renderProducts from './renderProducts';
 import showMoreProducts from './showMoreProducts';
+import shareFormValidate from './shareFormValidate';
+import registerFormValidate from './registerFormValidate';
 
 const initialize = async () => {
   toggleRegisterDescription();
+  registerFormValidate();
+  shareFormValidate();
 
   localStorage.setItem('page', 1);
 
