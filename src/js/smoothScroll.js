@@ -1,7 +1,7 @@
 const smoothScroll = () => {
   const links = document.querySelectorAll('.header-menu ul a');
 
-  links.forEach((link) => link.addEventListener('click', function (e) {
+  links.forEach((link) => link.addEventListener('click', function handleClick(e) {
     e.preventDefault();
     const href = this.getAttribute('href');
 
