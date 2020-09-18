@@ -1,4 +1,4 @@
-.products {
+#products {
   margin-bottom: 50px;
 
   .container {
@@ -56,7 +56,7 @@
 
 // MOBILE
 @media (max-width: 768px) {
-  .products {
+  #products {
     #products-list {
       grid-template-columns: repeat(1, minmax(auto, 100%));
       padding: 0 16px;

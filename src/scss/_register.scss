@@ -1,5 +1,5 @@
 
-.register {
+#register {
   .container {
     display: flex;
   }
@@ -67,7 +67,7 @@
 
 // MOBILE
 @media (max-width: 768px) {
-  .register {
+  #register {
     .container {
       flex-direction: column;
     }

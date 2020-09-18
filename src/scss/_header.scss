@@ -1,4 +1,4 @@
-.header {
+#header {
   color: $light;
   height: 400px;
   padding-top: 70px;
@@ -39,7 +39,7 @@
     }
   }
 
-  .header-menu {
+  .header-menu ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -56,7 +56,7 @@
 
 // MOBILE
 @media (max-width: 768px) {
-  .header {
+  #header {
     height: auto;
 
     .header-menu .header-button {
@@ -71,7 +71,7 @@
 
 
 @media (max-width: 420px) {
-  .header {
+  #header {
     &::before {
       transform: skew(0deg, 20deg);
       height: 500px;
