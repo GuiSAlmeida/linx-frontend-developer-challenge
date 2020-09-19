@@ -9,9 +9,12 @@ const registerFormValidate = () => {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (warnContent.classList.contains('success')) {
+      warnContent.classList.remove('success');
+    }
 
     let warnings = '';
-    const regexEmail = /^\w+@\w+(\.[a-z]{2,4}){1,2}$/;
+    const regexEmail = /^.+@\w+(\.[a-z]{2,4}){1,2}$/;
 
     if (name.value.length === 0 || cpf.value.length === 0) {
       warnings += 'Preencha todos campos!<br>';
@@ -23,12 +26,20 @@ const registerFormValidate = () => {
       warnings += 'Selecione gênero!<br>';
     }
     if (warnings.length > 0) {
+      warnContent.classList.add('warnings');
       warnContent.innerHTML = warnings;
     } else {
-      warnContent.style.color = 'green';
-      warnContent.style.fontStyle = 'normal';
-      warnContent.style.fontWeight = 'bold';
+      if (warnContent.classList.contains('warnings')) {
+        warnContent.classList.remove('warnings');
+      }
+      warnContent.classList.add('success');
       warnContent.innerHTML = 'Enviado!';
+
+      name.value = '';
+      email.value = '';
+      cpf.value = '';
+      male.checked = false;
+      female.checked = false;
     }
   });
 };
