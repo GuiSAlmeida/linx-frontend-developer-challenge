@@ -8,19 +8,17 @@ import registerFormValidate from './registerFormValidate';
 import smoothScroll from './smoothScroll';
 import renderLoading from './renderLoading';
 
-const initialize = async () => {
-  toggleRegisterDescription();
-  registerFormValidate();
-  shareFormValidate();
-  smoothScroll();
-  renderLoading();
+localStorage.setItem('page', 1);
 
-  localStorage.setItem('page', 1);
+toggleRegisterDescription();
+registerFormValidate();
+shareFormValidate();
+smoothScroll();
+renderLoading();
+showMoreProducts();
 
-  const products = await getProducts(1);
-  renderProducts(products);
-  localStorage.setItem('products', JSON.stringify(products));
-
-  showMoreProducts();
-};
-initialize();
+getProducts(1)
+  .then(({ products }) => {
+    renderProducts(products);
+    localStorage.setItem('products', JSON.stringify(products));
+  });

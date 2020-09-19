@@ -15,10 +15,12 @@ const showMoreProducts = () => {
     page += 1;
     localStorage.setItem('page', page);
 
-    const newProducts = await getProducts(page);
-    const allProducts = [...oldProducts, ...newProducts];
-    renderProducts(allProducts);
-    localStorage.setItem('products', JSON.stringify(allProducts));
+    getProducts(page)
+      .then(({ products: newProducts }) => {
+        const allProducts = [...oldProducts, ...newProducts];
+        renderProducts(allProducts);
+        localStorage.setItem('products', JSON.stringify(allProducts));
+      });
   });
 };
 
