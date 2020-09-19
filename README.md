@@ -10,44 +10,32 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisities
 
-You should have installed the [node.js](https://nodejs.org/en/).
+You should have installed the [node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) .
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+A step by step to get a development env running
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Clone the repository
 
 ```
-until finished
+git clone https://github.com/GuiSAlmeida/linx-frontend-developer-challenge.git
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+and access the project folder
 
 ```
-Give an example
+cd linx-frontend-developer-challenge/
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
+install dependencies
 
 ```
-Give an example
+npm install
+```
+
+to up local server and view page in browser
+```
+npm run server
 ```
 
 ## Deployment
@@ -57,10 +45,17 @@ make sure that ok using the following command:
 ```
 npm run lint
 ```
+and run the following command to generate production files on public folder
+```
+npm run build
+```
 
 ## Built With
 
-* [Husky](https://github.com/typicode/husky) - pre-push hook.
+* [Husky](https://github.com/typicode/husky) - Pre-push hook.
+* [Webpack](https://webpack.js.org/) - Bundle JS modules.
+* [Babel](https://babeljs.io/) - Transpiler ES6+.
+* [Sass](https://sass-lang.com/) - CSS pre-processor.
 
 ## Contributing
 
@@ -75,9 +70,3 @@ See also the list of [contributors](https://github.com/GuiSAlmeida/linx-frontend
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
