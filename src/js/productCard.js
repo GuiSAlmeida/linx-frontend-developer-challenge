@@ -1,5 +1,10 @@
 import formatPrice from './utils/formatPrice';
 
+/**
+ * This function create a markup to render the component product card in the body of html.
+ *
+ * @param {object} product that will be rendered
+ */
 const productCard = (product) => `
   <div class="product-card">
     <img src=${product.image} alt=${product.name} class="product-image">

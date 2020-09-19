@@ -1,3 +1,7 @@
+/**
+ * This function applies a smooth effect to the scroll transition
+ * when clicking on the header menu buttons.
+ */
 const smoothScroll = () => {
   const links = document.querySelectorAll('.header-menu ul a');
 

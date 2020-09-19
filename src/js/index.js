@@ -8,8 +8,6 @@ import registerFormValidate from './registerFormValidate';
 import smoothScroll from './smoothScroll';
 import renderLoading from './renderLoading';
 
-localStorage.setItem('page', 1);
-
 toggleRegisterDescription();
 registerFormValidate();
 shareFormValidate();
@@ -20,5 +18,6 @@ showMoreProducts();
 getProducts(1)
   .then(({ products }) => {
     renderProducts(products);
+    localStorage.setItem('page', 1);
     localStorage.setItem('products', JSON.stringify(products));
   });

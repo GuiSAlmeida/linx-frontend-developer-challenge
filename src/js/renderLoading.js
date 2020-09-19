@@ -1,3 +1,6 @@
+/**
+ * This function create a markup to render the component loading in the body of html.
+ */
 const renderLoading = () => {
   const markup = `
     <div class="loading">

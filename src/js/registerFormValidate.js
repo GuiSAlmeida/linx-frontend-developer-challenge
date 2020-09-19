@@ -1,3 +1,7 @@
+/**
+ * This function validates the form fields and renders
+ * on the screen if there was an error or success.
+ */
 const registerFormValidate = () => {
   const form = document.getElementById('register-form');
   const name = document.getElementById('name');
