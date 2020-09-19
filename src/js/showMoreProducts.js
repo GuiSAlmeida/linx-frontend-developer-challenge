@@ -1,11 +1,14 @@
 import getProducts from './getProducts';
 import renderProducts from './renderProducts';
+import renderLoading from './renderLoading';
 
 const showMoreProducts = () => {
   const button = document.getElementById('button-more');
 
   button.addEventListener('click', async (e) => {
     e.preventDefault();
+    renderLoading();
+
     const oldProducts = JSON.parse(localStorage.getItem('products'));
 
     let page = parseInt(localStorage.getItem('page'), 10);

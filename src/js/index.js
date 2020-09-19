@@ -6,12 +6,14 @@ import showMoreProducts from './showMoreProducts';
 import shareFormValidate from './shareFormValidate';
 import registerFormValidate from './registerFormValidate';
 import smoothScroll from './smoothScroll';
+import renderLoading from './renderLoading';
 
 const initialize = async () => {
   toggleRegisterDescription();
   registerFormValidate();
   shareFormValidate();
   smoothScroll();
+  renderLoading();
 
   localStorage.setItem('page', 1);
 
