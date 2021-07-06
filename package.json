@@ -8,11 +8,12 @@
     "dev": "NODE_ENV=development webpack",
     "build": "NODE_ENV=production webpack",
     "server": "./node_modules/.bin/webpack-dev-server --inline --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GuiSAlmeida/linx-frontend-developer-challenge.git"
+    "url": "https://github.com/GuiSAlmeida/linx-frontend-developer-challenge.git"
   },
   "keywords": [
     "challenge",
@@ -32,8 +33,10 @@
     "@babel/runtime": "^7.11.2",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.3.0",
+    "cypress": "^7.6.0",
     "eslint": "^7.8.1",
     "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
     "mini-css-extract-plugin": "^0.11.1",
